@@ -1,68 +1,25 @@
-:root{
-  --text:#23262b; --muted:#5b6270; --accent:#2b5d7d; --accent-soft:#eef4f8;
-  --line:#e3e6ea; --bg:#fcfcfb;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);
-  font:18px/1.75 "Source Serif 4",Georgia,"Times New Roman",serif}
-a{color:var(--accent);text-decoration:none}
+body{margin:0;background:#fff;color:#222;font:18px/1.7 "Times New Roman",Times,serif}
+a{color:#1a5fa8;text-decoration:none}
 a:hover{text-decoration:underline}
-
-header{border-bottom:1px solid var(--line);background:#fff}
-.bar{max-width:980px;margin:0 auto;padding:18px 24px;display:flex;
-  justify-content:space-between;align-items:center;font-family:Inter,Arial,sans-serif}
-.brand{font-size:19px;font-weight:600;color:var(--text);letter-spacing:.2px}
-.brand:hover{text-decoration:none}
-nav{display:flex;gap:28px;font-size:15px}
-nav a{color:var(--muted)}
-nav a.here{color:var(--text);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:3px}
-nav a:hover{color:var(--accent);text-decoration:none}
-
-.page{max-width:980px;margin:0 auto;padding:52px 24px 40px}
-
-.hero{display:flex;gap:52px;align-items:center}
-.hero img{width:330px;height:auto;flex:none;border-radius:6px;
-  box-shadow:0 6px 24px rgba(30,40,60,.12)}
-.hero h1{font-size:42px;font-weight:600;margin:0 0 6px;letter-spacing:.3px}
-.role{margin:0;color:var(--muted);font-size:18px}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;
-  font-family:Inter,Arial,sans-serif;font-size:14px}
-.links a{border:1px solid var(--line);border-radius:999px;padding:5px 14px;
-  background:#fff;color:var(--text)}
-.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
-
-h2{font-size:26px;font-weight:600;margin:60px 0 22px;display:flex;align-items:center;gap:14px}
-h2::after{content:"";flex:1;height:1px;background:var(--line)}
-
-.about p{margin:0 0 18px}
-.lines{list-style:none;counter-reset:n;margin:6px 0 24px;padding:0}
-.lines li{counter-increment:n;position:relative;padding:4px 0 4px 52px;margin-bottom:16px}
-.lines li::before{content:counter(n);position:absolute;left:0;top:6px;width:34px;height:34px;
-  border-radius:50%;background:var(--accent);color:#fff;font:600 16px/34px Inter,Arial,sans-serif;
-  text-align:center}
-.lines strong{color:var(--accent)}
-.goal{border-left:3px solid var(--accent);padding:2px 0 2px 20px;font-style:italic;color:#333}
-.fun{background:var(--accent-soft);border-radius:8px;padding:18px 22px;margin-top:28px}
-.fun p{margin:0}
-
-.cv-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
-.cv-head h1{font-size:34px;font-weight:600;margin:0}
-.btn{font-family:Inter,Arial,sans-serif;font-size:14px;background:var(--accent);color:#fff;
-  padding:8px 18px;border-radius:999px}
-.btn:hover{text-decoration:none;opacity:.9}
-iframe{width:100%;height:85vh;border:1px solid var(--line);border-radius:6px;margin-top:22px;background:#fff}
-
-footer{max-width:932px;margin:0 auto;padding:24px 0;border-top:1px solid var(--line);
-  color:var(--muted);font:13px Inter,Arial,sans-serif}
-
-@media (max-width:720px){
-  body{font-size:17px}
-  .bar{padding:14px 16px}
-  nav{gap:18px}
-  .page{padding:32px 16px}
-  .hero{flex-direction:column;align-items:flex-start;gap:24px}
-  .hero img{width:100%;max-width:340px}
-  .hero h1{font-size:34px}
+.page{max-width:900px;margin:0 auto;padding:28px 20px 60px}
+nav{display:flex;gap:24px;justify-content:flex-end;margin-bottom:40px}
+nav a.here{color:#222}
+.top{display:flex;gap:44px;align-items:center}
+.top img{width:330px;height:auto;flex:none}
+h1{font-size:34px;font-weight:normal;margin:0 0 8px}
+.info{margin:0;color:#444}
+.icons{display:flex;gap:18px;margin-top:16px;font-size:24px}
+.icons a{color:#444}
+.icons a:hover{color:#1a5fa8;text-decoration:none}
+h2{font-size:24px;font-weight:normal;margin:44px 0 14px}
+.about p{margin:0 0 16px}
+.about ol{margin:0 0 16px;padding-left:24px}
+.about li{margin-bottom:10px}
+.dl{margin:0 0 16px}
+iframe{width:100%;height:85vh;border:1px solid #ddd}
+@media (max-width:640px){
+  .top{flex-direction:column;align-items:flex-start;gap:20px}
+  .top img{width:100%;max-width:320px}
+  nav{justify-content:flex-start}
   iframe{height:70vh}
-  footer{margin:0 16px;padding:20px 0}
 }
