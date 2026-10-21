@@ -20,6 +20,8 @@ h2{font-size:24px;font-weight:bold;margin:0 0 16px;padding-bottom:6px;border-bot
 .news{list-style:none;padding:0;margin:0}
 .news li{margin-bottom:12px}
 .news .d{font-weight:bold}
+.pics{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 6px}
+.pics img{height:220px;width:auto;max-width:100%;object-fit:cover}
 .dl{margin:0 0 16px}
 iframe{width:100%;height:85vh;border:1px solid #ddd}
 @media (max-width:640px){
@@ -27,4 +29,5 @@ iframe{width:100%;height:85vh;border:1px solid #ddd}
   .top img{width:100%;max-width:200px}
   nav{justify-content:flex-start}
   iframe{height:70vh}
+  .pics img{height:auto;width:100%}
 }
