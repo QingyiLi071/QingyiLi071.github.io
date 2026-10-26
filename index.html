@@ -48,6 +48,20 @@
 <!-- ===== 自我介绍结束 ===== -->
 </div>
 
+<div class="section">
+<h2>Recent News</h2>
+<!-- 自动显示 news.html 里最上面的两条 -->
+<ul class="news" id="recent"></ul>
+<p class="more"><a href="news.html">All news →</a></p>
+</div>
+<script>
+fetch('news.html').then(r=>r.text()).then(t=>{
+  const doc=new DOMParser().parseFromString(t,'text/html');
+  const ul=document.getElementById('recent');
+  [...doc.querySelectorAll('.news > li')].slice(0,2).forEach(li=>ul.appendChild(document.importNode(li,true)));
+}).catch(()=>{});
+</script>
+
 
 <p class="fun"><strong>Fun fact:</strong> I have been curious about how a person comes to be who they are for as long as I can remember, first through traditional Chinese divination and astrology (the <em>I Ching</em>, BaZi, and Zi Wei Dou Shu), systems that also try to read a person against time and circumstance. Around 24, with a freshly matured prefrontal cortex, I switched my allegiance to science. I have not forgotten my old flame: in my spare time I still study these traditions and keep refining my technique.</p>
 
